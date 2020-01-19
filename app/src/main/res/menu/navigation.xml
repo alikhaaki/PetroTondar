@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item
+		    android:id="@+id/home"
+		    android:icon="@drawable/home_outline"
+		    android:title="پتروتندر"/>
+	<item
+		    android:id="@+id/search"
+		    android:icon="@drawable/ic_search_black_24dp"
+		    android:title="جستجو"/>
+	<item
+		    android:id="@+id/favorite"
+		    android:icon="@drawable/ic_favorite_border_black_24dp"
+		    android:title="موردعلاقه"/>
+	<item
+		    android:id="@+id/profile"
+		    android:icon="@drawable/ic_person_outline_black_24dp"
+		    android:title="پروفایل"/>
+	<item
+		    android:id="@+id/menu"
+		    android:icon="@drawable/ic_menu_black_24dp"
+		    android:title="منو"/>
+</menu>

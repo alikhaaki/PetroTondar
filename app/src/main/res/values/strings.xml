@@ -1,0 +1,6 @@
+<resources>
+	<string name="app_name">Petro Tondar</string>
+	<string name="sss">send over %1$s ddd</string>
+	<string name="send_over">  ارسال مجدد در %1$d دیگر </string>
+	<string name="text_4_digit">4 رقمی که به شماره %1$s \n ارسال کردیم را وارد نمایید</string>
+</resources>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    xmlns:app="http://schemas.android.com/apk/res-auto"
+	    xmlns:tools="http://schemas.android.com/tools"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#ddd"
+	    tools:context=".activity.HomeActivity">
+
+	<RelativeLayout
+		    android:id="@+id/relative"
+		    android:layout_width="match_parent"
+		    android:layout_height="60dp"
+		    android:layout_alignParentTop="true"
+		    android:background="#fff">
+
+		<TextView
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:layout_centerInParent="true"
+
+			    android:gravity="center"
+			    android:text="پتروتندر\n مناقصه و مزایده"
+			    android:textColor="#000"/>
+
+		<ImageView
+			    android:id="@+id/image_chat"
+			    android:layout_width="35dp"
+			    android:layout_height="35dp"
+			    android:layout_centerVertical="true"
+			    android:layout_marginLeft="@dimen/margin_st"
+			    android:src="@drawable/chat_outline"/>
+
+		<ImageView
+			    android:id="@+id/image_notification"
+			    android:layout_width="35dp"
+			    android:layout_height="35dp"
+			    android:layout_alignParentEnd="true"
+			    android:layout_centerVertical="true"
+			    android:layout_marginRight="@dimen/margin_st"
+			    android:src="@drawable/ic_notifications_none_black_24dp"/>
+	</RelativeLayout>
+
+	<ScrollView
+
+		    android:layout_above="@id/bottom_navigation"
+		    android:layout_below="@id/relative"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content">
+		<RelativeLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content">
+			<ss.com.bannerslider.Slider
+				    android:id="@+id/slider"
+				    android:layout_width="match_parent"
+				    android:layout_height="200dp"
+
+				    android:layout_marginLeft="@dimen/margin_st"
+				    android:layout_marginTop="@dimen/margin_st"
+				    android:layout_marginRight="@dimen/margin_st"/>
+
+			<androidx.cardview.widget.CardView
+				    android:id="@+id/card_linear"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_below="@id/slider"
+				    android:layout_marginLeft="@dimen/margin_st"
+				    android:layout_marginTop="16dp"
+				    android:layout_marginRight="@dimen/margin_st"
+				    app:cardCornerRadius="6dp"
+				    app:cardElevation="6dp">
+
+				<LinearLayout
+					    android:layout_width="match_parent"
+					    android:layout_height="50dp"
+					    android:orientation="horizontal">
+
+					<TextView
+						    android:layout_width="0dp"
+						    android:layout_height="match_parent"
+						    android:layout_weight=".5"
+						    android:background="@color/newColor"
+						    android:gravity="center"
+						    android:text="مزایده"
+						    android:textSize="20sp"/>
+
+					<TextView
+						    android:layout_width="0dp"
+						    android:layout_height="match_parent"
+						    android:layout_weight=".5"
+						    android:gravity="center"
+						    android:text="مناقصه"
+						    android:textSize="20sp"/>
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+
+			<androidx.cardview.widget.CardView
+				    android:id="@+id/card_lebas_relative"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_below="@id/card_linear"
+				    android:layout_marginLeft="@dimen/margin_st"
+				    android:layout_marginTop="8dp"
+				    android:layout_marginRight="@dimen/margin_st"
+				    app:cardCornerRadius="6dp"
+				    app:cardElevation="6dp">
+
+				<RelativeLayout
+					    android:layout_width="match_parent"
+					    android:layout_height="wrap_content">
+
+					<ImageView
+						    android:id="@+id/image_tshirt"
+						    android:layout_width="120dp"
+						    android:layout_height="120dp"
+						    android:layout_alignParentRight="true"
+						    android:layout_marginRight="@dimen/margin_st"
+						    android:src="@drawable/t_shirt"/>
+
+					<TextView
+						    android:id="@+id/text_lebas"
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:layout_marginTop="32dp"
+						    android:layout_marginRight="@dimen/margin_st"
+						    android:layout_toLeftOf="@id/image_tshirt"
+						    android:text="خرید لباس جدید"
+						    android:textColor="#000"
+						    android:textSize="18sp"/>
+
+					<TextView
+						    android:layout_width="wrap_content"
+						    android:layout_height="wrap_content"
+						    android:layout_below="@id/text_lebas"
+						    android:layout_marginRight="@dimen/margin_st"
+						    android:layout_toLeftOf="@id/image_tshirt"
+						    android:text="زیر قیمت بازار"
+						    android:textColor="@color/newColor"/>
+
+					<ImageView
+						    android:layout_width="32dp"
+						    android:layout_height="32dp"
+						    android:layout_alignParentLeft="true"
+						    android:layout_centerVertical="true"
+						    android:src="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+				</RelativeLayout>
+			</androidx.cardview.widget.CardView>
+
+			<androidx.recyclerview.widget.RecyclerView
+				    android:id="@+id/recycler_home"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_below="@id/card_lebas_relative"
+				    android:layout_marginTop="16dp"
+				    />
+		</RelativeLayout>
+	</ScrollView>
+
+	<com.google.android.material.bottomnavigation.BottomNavigationView
+		    android:layout_alignParentBottom="true"
+		    app:menu="@menu/navigation"
+		    android:id="@+id/bottom_navigation"
+		    android:layout_width="match_parent"
+		    android:background="#fff"
+		    app:labelVisibilityMode="labeled"
+		    android:layout_height="wrap_content"/>
+
+</RelativeLayout>
